@@ -1,0 +1,7 @@
+apiVersion: datumctl.datum.net/v1alpha1
+kind: PluginList
+name: milo-os
+description: Portable CLI plugins for the Milo platform
+owner: milo-os
+homepage: https://github.com/milo-os/cli-plugins
+items: []
