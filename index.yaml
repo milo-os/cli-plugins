@@ -4,4 +4,49 @@ name: milo-os
 description: Portable CLI plugins for the Milo platform
 owner: milo-os
 homepage: https://github.com/milo-os/cli-plugins
-items: []
+items:
+- apiVersion: datumctl.datum.net/v1alpha1
+  kind: Plugin
+  metadata:
+    name: ipam
+  spec:
+    shortDescription: Manage IP address space (pools and prefixes) on Datum
+    homepage: https://github.com/milo-os/ipam
+    version: v0.1.0
+    platforms:
+    - selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Linux_x86_64.tar.gz
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
+    - selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Linux_arm64.tar.gz
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Darwin_x86_64.tar.gz
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Darwin_arm64.tar.gz
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
+    - selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Windows_x86_64.zip
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
+    - selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.1.0/milo-ipam_Windows_arm64.zip
+      sha256: '0000000000000000000000000000000000000000000000000000000000000000'
