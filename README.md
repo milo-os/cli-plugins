@@ -8,7 +8,7 @@ Milo services ship their own command-line experiences as plugins. This catalog i
 
 | Name | Description |
 |------|-------------|
-| [ipam](plugins/ipam.yaml) | Manage IP address space (pools and prefixes) on Datum |
+| [ipam](plugins/ipam.yaml) | Manage IP address space (pools and prefixes) across the platform |
 
 ## Using this catalog
 

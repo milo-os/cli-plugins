@@ -10,7 +10,7 @@ items:
   metadata:
     name: ipam
   spec:
-    shortDescription: Manage IP address space (pools and prefixes) on Datum
+    shortDescription: Manage IP address space (pools and prefixes) across the platform
     homepage: https://github.com/milo-os/ipam
     version: v0.1.0
     platforms:

@@ -1,4 +1,4 @@
-# IPAM CLI plugin (milo-ipam) — manage IP address space on Datum.
+# IPAM CLI plugin (milo-ipam) — manage IP address space across the platform.
 #
 # NOTE: the sha256 values below are placeholders. The milo-os/ipam v0.1.0
 # release does not yet publish the per-platform `milo-ipam` archives this entry
@@ -13,7 +13,7 @@ kind: Plugin
 metadata:
   name: ipam
 spec:
-  shortDescription: Manage IP address space (pools and prefixes) on Datum
+  shortDescription: Manage IP address space (pools and prefixes) across the platform
   homepage: https://github.com/milo-os/ipam
   version: v0.1.0
   platforms:
