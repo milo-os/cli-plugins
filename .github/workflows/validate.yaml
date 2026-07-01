@@ -1,0 +1,38 @@
+name: Validate catalog
+
+# Runs on every PR and on pushes to main. The catalog is small, so we validate
+# and verify the whole thing each time rather than trying to diff which plugins
+# changed — that keeps the check honest (a manifest can break for reasons
+# unrelated to the files a PR touched) and always exercises the real assets.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install tooling
+        run: pip install --quiet "jsonschema[format-nongpl]>=4" "PyYAML>=6"
+
+      # index.yaml is what datumctl reads, and it is fully derived from
+      # plugins/*.yaml. Fail if the committed index doesn't match what the
+      # generator produces, so main's index can never drift from the manifests.
+      - name: Check index.yaml is in sync with plugins/
+        run: python3 scripts/generate_index.py --check
+
+      # Schema-validate every manifest and prove every advertised download
+      # actually resolves and matches its checksum.
+      - name: Validate manifests and verify release assets
+        run: python3 scripts/verify_manifests.py
