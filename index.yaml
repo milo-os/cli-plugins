@@ -51,3 +51,48 @@ items:
           arch: arm64
       uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Windows_arm64.zip
       sha256: 86688afbb1968ceff1714562dea79176bdaabfb3c45cb61ce4a7a1c14f6a391a
+- apiVersion: datumctl.datum.net/v1alpha1
+  kind: Plugin
+  metadata:
+    name: ipam
+  spec:
+    shortDescription: Manage IP address space (pools and prefixes) across the platform
+    homepage: https://github.com/milo-os/ipam
+    version: v0.2.0
+    platforms:
+    - selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Linux_x86_64.tar.gz
+      sha256: a6ae0a831a9376b4d034e0f0bee6090b101f871bc1f3535bbc8c660b5bb8eed3
+    - selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Linux_arm64.tar.gz
+      sha256: 937e8b702597b44b130f700021eea19b6eb089fda76022dafb2296361d082f03
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Darwin_x86_64.tar.gz
+      sha256: c5b3ed4619682624c9ec5bff0e718b1d186230c06b9da732ef223bc215bb8098
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Darwin_arm64.tar.gz
+      sha256: dc6fdac01a9cb6124c71cc35f80c1c1d49b3012d90accc72f036677722d60f3e
+    - selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Windows_x86_64.zip
+      sha256: 75cdda675ed61d42488f2410b87dc6e5a74af6689496da6e8f9092bc6026ff95
+    - selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+      uri: https://github.com/milo-os/ipam/releases/download/v0.2.0/milo-ipam_Windows_arm64.zip
+      sha256: 796cce6f569d9bcaa8b0a5c90f65ae03d8d17a8ee2e033f697f0108095e452b7

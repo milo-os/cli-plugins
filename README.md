@@ -9,6 +9,7 @@ Milo services ship their own command-line experiences as plugins. This catalog i
 | Name | Description |
 |------|-------------|
 | [inventory](plugins/inventory.yaml) | Browse and populate the Datum Cloud inventory graph (typed nodes and edges) |
+| [ipam](plugins/ipam.yaml) | Manage IP address space (pools and prefixes) across the platform |
 
 ## Using this catalog
 
