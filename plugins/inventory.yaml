@@ -1,20 +1,12 @@
 apiVersion: datumctl.datum.net/v1alpha1
-kind: PluginList
-name: milo-os
-description: Portable CLI plugins for the Milo platform
-owner: milo-os
-homepage: https://github.com/milo-os/cli-plugins
-items:
-- apiVersion: datumctl.datum.net/v1alpha1
-  kind: Plugin
-  metadata:
-    name: inventory
-  spec:
-    shortDescription: Browse and populate the Datum Cloud inventory graph (typed nodes
-      and edges)
-    homepage: https://github.com/datum-cloud/inventory
-    version: v0.1.0
-    platforms:
+kind: Plugin
+metadata:
+  name: inventory
+spec:
+  shortDescription: Browse and populate the Datum Cloud inventory graph (typed nodes and edges)
+  homepage: https://github.com/datum-cloud/inventory
+  version: v0.1.0
+  platforms:
     - selector:
         matchLabels:
           os: linux
