@@ -39,8 +39,14 @@ datumctl ipam pool list
 
 1. Add the `datumctl-plugin` topic to your plugin's GitHub repository.
 2. Open a pull request adding `plugins/<your-plugin-name>.yaml`, following the [schema](schema/plugin-v1alpha1.json).
-3. CI validates your manifest: schema conformance, that every download URL resolves, and that each SHA256 matches the published archive.
-4. Once merged, [`index.yaml`](index.yaml) — the file `datumctl` actually reads — is regenerated automatically.
+3. Regenerate the index and commit it alongside your manifest:
+
+   ```sh
+   python3 scripts/generate_index.py
+   ```
+
+   [`index.yaml`](index.yaml) — the file `datumctl` actually reads — is derived entirely from `plugins/*.yaml`, and CI fails if the two drift.
+4. CI validates every manifest: schema conformance, that each download URL resolves, and that each SHA256 matches the published archive. A weekly [health check](.github/workflows/catalog-health.yaml) re-verifies the whole catalog so a plugin's links can't rot unnoticed.
 
 ## Plugin manifest format
 

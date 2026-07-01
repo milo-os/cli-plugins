@@ -1,0 +1,53 @@
+name: Catalog health
+
+# The catalog points at release assets that live in other repositories, which
+# can be deleted, retagged, or re-cut after a plugin lands here. PR validation
+# only catches breakage at merge time, so this re-verifies every plugin's
+# download links and checksums on a schedule and opens an issue if the catalog
+# has rotted — before a user hits it during `datumctl plugin install`.
+on:
+  schedule:
+    - cron: "0 12 * * 1" # Mondays, 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install tooling
+        run: pip install --quiet "jsonschema[format-nongpl]>=4" "PyYAML>=6"
+
+      - name: Verify every plugin's download links and checksums
+        run: python3 scripts/verify_manifests.py
+
+      - name: Open an issue if the catalog is unhealthy
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create catalog-health \
+            --color b60205 \
+            --description "A plugin download link or checksum is broken" 2>/dev/null || true
+
+          body=$(printf 'The scheduled catalog health check failed: one or more plugin download URLs no longer resolve, or their checksums no longer match the published release assets.\n\nUsers may be unable to install or verify the affected plugin(s) with datumctl until this is fixed. See the run log for the specific plugin and platform:\n\n%s\n' "$RUN_URL")
+
+          number=$(gh issue list --state open --label catalog-health --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "$body"
+          else
+            gh issue create \
+              --title "Catalog health check is failing" \
+              --label catalog-health \
+              --body "$body"
+          fi
