@@ -1,45 +1,47 @@
+# Inventory CLI plugin (milo-inventory) — browse the Datum Cloud physical inventory.
+# Versions/checksums point at the milo-os/inventory GitHub release assets.
 apiVersion: datumctl.datum.net/v1alpha1
 kind: Plugin
 metadata:
   name: inventory
 spec:
-  shortDescription: Browse and populate the Datum Cloud inventory graph (typed nodes and edges)
-  homepage: https://github.com/datum-cloud/inventory
-  version: v0.1.0
+  shortDescription: Browse the Datum Cloud physical inventory (providers, regions, sites, clusters, nodes)
+  homepage: https://github.com/milo-os/inventory
+  version: v0.2.0
   platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Linux_x86_64.tar.gz
-      sha256: 9c392c1bc6368d00a4496f4449e8de06c84a1d29da5d02999df4ccf19acc778d
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Linux_x86_64.tar.gz
+      sha256: "70176008d984c8d67869385b152025c6b7debc7d2a0bd0e219742c098af74ea5"
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Linux_arm64.tar.gz
-      sha256: c1a1698faf072091c1fd11ed62bbc451e5d1be55b872014042241dc10061fdbc
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Linux_arm64.tar.gz
+      sha256: "d7f26925db0b6f108dc0c320db6a99f82251e5bd5385ed45c336ee896253dfc3"
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Darwin_x86_64.tar.gz
-      sha256: 4a8b958a7e91454729da493d7f1abf90f0303df7c35328fdaf181f141c98f1c2
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Darwin_x86_64.tar.gz
+      sha256: "6a80e4f8091ec0f2dd9cd95f1ba84957b1e38314e8bf48d03e6590d66272539c"
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Darwin_arm64.tar.gz
-      sha256: 5966496965bf8bec2675af3bdff9a71ae2429473e5b2b55ee4137571f0f8b0a5
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Darwin_arm64.tar.gz
+      sha256: "99f0977cbf315dc586011887c2fd9eacc6cb2fe4ac8077bac58abf5ac433d372"
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Windows_x86_64.zip
-      sha256: 03507d79ac88360bf2c6eab187a383542933e7686d8826c36df43df9bb91d902
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Windows_x86_64.zip
+      sha256: "aadbb085d2802e56ab9ff6d8701c6584b3f76342b78c576433a42f7070e385f0"
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Windows_arm64.zip
-      sha256: 86688afbb1968ceff1714562dea79176bdaabfb3c45cb61ce4a7a1c14f6a391a
+      uri: https://github.com/milo-os/inventory/releases/download/v0.2.0/milo-inventory_Windows_arm64.zip
+      sha256: "1e9c1f418757a275269b69bd1820d933e9cb506a3e2e64fa00f92cad159f8feb"
