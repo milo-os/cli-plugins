@@ -7,41 +7,41 @@ metadata:
 spec:
   shortDescription: Query logs for your Datum Cloud projects
   homepage: https://github.com/milo-os/telemetry
-  version: v0.5.0
+  version: v0.6.1
   platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Linux_x86_64.tar.gz
-      sha256: 914ddec5e2d601fa5047f501365af9b5a9dcafa1a71bdaae01d5c64a428c0c29
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Linux_x86_64.tar.gz
+      sha256: f34e6811f745519b0e1a6cf953cdfb9d9b4df6aaa78a193cdd05ccd6576bc3f8
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Linux_arm64.tar.gz
-      sha256: 00a069f7c48bd5306bbeb6f1a44321a002027a17b978d800ff9a4f91ceb0d749
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Linux_arm64.tar.gz
+      sha256: 1e34f7517d756249bf51d25d089e4c5d24e9e6eadbaaf83efc42a2bac9b2bfc0
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Darwin_x86_64.tar.gz
-      sha256: 87c1d15f0f87b2efc590e3c7996d19c268dbbc93e88c33fa22aa860fb0ab25b6
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Darwin_x86_64.tar.gz
+      sha256: 4a7bcec72289e892954c18402c0f9a43e010ba5e60ff7e7a2d02ac4cc67a1d1f
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Darwin_arm64.tar.gz
-      sha256: cf9adec46d2383b0272f6e8bb44aa4afb767e7bf461b137ead71a163aec5b1cd
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Darwin_arm64.tar.gz
+      sha256: 048d9af518adc161e48f210fc5c22d0f815dabae9653d183087733f3f5fa4da7
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Windows_x86_64.zip
-      sha256: 53f5dc55eec0d8f62ae217f03a18c3ea9caef37cee4de689862c6b185da348fb
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Windows_x86_64.zip
+      sha256: d27aa5df3f727608ab1292f6f2833943ba9c9f118d45d8f13357e66c80ee62b1
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.5.0/milo-telemetry_Windows_arm64.zip
-      sha256: e3435d2e2ba36b00c658fb12220547aefbe95090635d8bfebd7c8702c6c1330d
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.1/milo-telemetry_Windows_arm64.zip
+      sha256: 38d2ace48ac8d15748f4d09a93e68d4267b36c286a95022b054f7b8e5905eaaf
