@@ -7,41 +7,41 @@ metadata:
 spec:
   shortDescription: Search for resources across the platform by kind, name, and project scope
   homepage: https://github.com/milo-os/search
-  version: v0.8.0
+  version: v0.8.6
   platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Linux_x86_64.tar.gz
-      sha256: "3049af90dc6594273c8c6f2d6f711f5bf4306f8eda4858dbe5e3aa5d8f69f587"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Linux_x86_64.tar.gz
+      sha256: "cf359d3d43f43de9da84cff8f6951e4307bcbbf0815233e4c576ce033bac411f"
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Linux_arm64.tar.gz
-      sha256: "421227db0f5c6b10096084c727057e18c593e923a94b0e396fb039e74dff3f75"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Linux_arm64.tar.gz
+      sha256: "d33a3559bda3676ff7755bb29df85912f5ac6a6beb036be183a28e8fd6af3474"
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Darwin_x86_64.tar.gz
-      sha256: "25c7237bb1aea979cb1ce1977d44dedb4dfc3bdbe29efffbe9c8fb3ef3a074cc"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Darwin_x86_64.tar.gz
+      sha256: "76eaeea1c98eb5af23bfc9deaf64aa6c2396cf20dfc87e9239533edd39e21219"
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Darwin_arm64.tar.gz
-      sha256: "c9699154e69911c976bf3f2ca9af5c25529248fd9a4d1b05350128888f197f05"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Darwin_arm64.tar.gz
+      sha256: "a95d82697e5c9a8a8ad9f48d1a21aa64f7f98af78ef68b9f644df504edb3fb69"
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Windows_x86_64.zip
-      sha256: "aabc4489e83a0c2b90e62f66ec1e7a6eb0c57904e1892bc05876937b3de51b35"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Windows_x86_64.zip
+      sha256: "3db6496fc8ce3c1453f4a0814e9b2357baf77d113f8800b8fdf73798c3faeec6"
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/milo-os/search/releases/download/v0.8.0/milo-search_Windows_arm64.zip
-      sha256: "86362ad083e92f7bde8efb93531e4ade69176e2a63ad28f16f7d3c3ee2b38ce8"
+      uri: https://github.com/milo-os/search/releases/download/v0.8.6/milo-search_Windows_arm64.zip
+      sha256: "60bede59d21a69d4c15fd36498e2b28ec9ba672e2aa9f1fb0010b64e75774c99"
