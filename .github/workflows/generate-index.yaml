@@ -47,4 +47,6 @@ jobs:
             echo "index.yaml already in sync; nothing to do."
             exit 0
           fi
+          EXPECTED_HEAD=$(git rev-parse HEAD)
+          export EXPECTED_HEAD
           scripts/sign-commit main "chore: regenerate index.yaml" index.yaml
