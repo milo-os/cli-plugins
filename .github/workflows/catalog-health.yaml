@@ -4,7 +4,8 @@ name: Catalog health
 # can be deleted, retagged, or re-cut after a plugin lands here. PR validation
 # only catches breakage at merge time, so this re-verifies every plugin's
 # download links and checksums on a schedule and opens an issue if the catalog
-# has rotted — before a user hits it during `datumctl plugin install`.
+# has rotted — before a user hits it during `datumctl plugin install`. It also
+# checks that index.yaml still matches plugins/.
 on:
   schedule:
     - cron: "0 12 * * 1" # Mondays, 12:00 UTC
@@ -30,6 +31,12 @@ jobs:
       - name: Verify every plugin's download links and checksums
         run: python3 scripts/verify_manifests.py
 
+      # The Regenerate index.yaml workflow keeps index.yaml in step with
+      # plugins/ on every merge, so drift here means that workflow is failing.
+      - name: Check that index.yaml matches plugins/
+        if: ${{ !cancelled() }}
+        run: python3 scripts/generate_index.py --check
+
       - name: Open an issue if the catalog is unhealthy
         if: failure()
         env:
@@ -40,7 +47,7 @@ jobs:
             --color b60205 \
             --description "A plugin download link or checksum is broken" 2>/dev/null || true
 
-          body=$(printf 'The scheduled catalog health check failed: one or more plugin download URLs no longer resolve, or their checksums no longer match the published release assets.\n\nUsers may be unable to install or verify the affected plugin(s) with datumctl until this is fixed. See the run log for the specific plugin and platform:\n\n%s\n' "$RUN_URL")
+          body=$(printf 'The scheduled catalog health check failed. Either a plugin download URL no longer resolves or its checksum no longer matches the published release asset, or index.yaml no longer matches plugins/ because the Regenerate index.yaml workflow is failing.\n\nUsers may be unable to install, verify, or see current versions of the affected plugin(s) with datumctl until this is fixed. See the run log for the failing step:\n\n%s\n' "$RUN_URL")
 
           number=$(gh issue list --state open --label catalog-health --json number --jq '.[0].number // empty')
           if [ -n "$number" ]; then

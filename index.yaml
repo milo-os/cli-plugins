@@ -8,49 +8,48 @@ items:
 - apiVersion: datumctl.datum.net/v1alpha1
   kind: Plugin
   metadata:
-    name: inventory
+    name: billing
   spec:
-    shortDescription: Browse and populate the Datum Cloud inventory graph (typed nodes
-      and edges)
-    homepage: https://github.com/datum-cloud/inventory
-    version: v0.1.0
+    shortDescription: View metered usage and spend for your organization or project
+    homepage: https://github.com/milo-os/billing
+    version: v0.6.0
     platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Linux_x86_64.tar.gz
-      sha256: 9c392c1bc6368d00a4496f4449e8de06c84a1d29da5d02999df4ccf19acc778d
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Linux_x86_64.tar.gz
+      sha256: 632f1d16c940af1d297429fbb799e83d6f1d0bb8312eb634a5ddd2dc985c4c81
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Linux_arm64.tar.gz
-      sha256: c1a1698faf072091c1fd11ed62bbc451e5d1be55b872014042241dc10061fdbc
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Linux_arm64.tar.gz
+      sha256: a3283d256692767c8ee1ea0bf805c1c22c11fa8090c23b49b26a9c786fa081ea
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Darwin_x86_64.tar.gz
-      sha256: 4a8b958a7e91454729da493d7f1abf90f0303df7c35328fdaf181f141c98f1c2
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Darwin_x86_64.tar.gz
+      sha256: 6f866b9d0200cdff2f95bf1d6ba1833d1bc5e2668ee06f3c8afb0c50fffe4dc4
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Darwin_arm64.tar.gz
-      sha256: 5966496965bf8bec2675af3bdff9a71ae2429473e5b2b55ee4137571f0f8b0a5
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Darwin_arm64.tar.gz
+      sha256: 28cc4e060742dba933188fe5d7f872eecc5c4a2eee740f2538fc87c21c7c16eb
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Windows_x86_64.zip
-      sha256: 03507d79ac88360bf2c6eab187a383542933e7686d8826c36df43df9bb91d902
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Windows_x86_64.zip
+      sha256: 84349b8f85b58e60a0bd5fd770a280f2bd66b952e400522f932f528ece9afb49
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/datum-cloud/inventory/releases/download/v0.1.0/datumctl-inventory_Windows_arm64.zip
-      sha256: 86688afbb1968ceff1714562dea79176bdaabfb3c45cb61ce4a7a1c14f6a391a
+      uri: https://github.com/milo-os/billing/releases/download/v0.6.0/milo-billing_Windows_arm64.zip
+      sha256: 5ce1ba584b096c93b85339f6744c82c41d5303fa2c9e180fa8599b7e2c6fb91d
 - apiVersion: datumctl.datum.net/v1alpha1
   kind: Plugin
   metadata:
@@ -58,41 +57,132 @@ items:
   spec:
     shortDescription: Manage IP address space (pools and prefixes) across the platform
     homepage: https://github.com/milo-os/ipam
-    version: v0.3.1
+    version: v0.5.5
     platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Linux_x86_64.tar.gz
-      sha256: d4000e6d82f3406d20e01d1c2feae972c3878ff56ebf10b00bbb5bbaa02898f2
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Linux_x86_64.tar.gz
+      sha256: 93fccece6124dec5db3aaf88c57b08c6dabb814d2436d8d775b68a2603515d79
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Linux_arm64.tar.gz
-      sha256: ce8e0d93648a93eb8caf2510ca8ba6158a158b0fb4f51f10a8b9fed9325726a0
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Linux_arm64.tar.gz
+      sha256: d7b69db76ebf13ebc3e7c917611e00604dc1d6cd4fb18dbbf2a9466f7aa2c7b6
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Darwin_x86_64.tar.gz
-      sha256: 06dab9f12cf22074e7a3c3b3ff0374adf0907f8792ab0c6c5e58a9307d4aac51
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Darwin_x86_64.tar.gz
+      sha256: 24ea9a7de7232f0495a31e907cb69a19a39af3ddc8c1e7c269e671d726dce006
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Darwin_arm64.tar.gz
-      sha256: 875fa4874a38c813ae5c079d1b47a67ebcf3613b8d54aac8470e0451b93e917f
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Darwin_arm64.tar.gz
+      sha256: 609d90f5fab095538e995e8976ad01de9d66e9f79b359ade7ea575dc68b46320
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Windows_x86_64.zip
-      sha256: d3d57f419f2fbc04c91472fa01642a6c8a138385964afc96a21eb37eca5a8277
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Windows_x86_64.zip
+      sha256: 5395655631269122f2f4025dbea40f0978c86f52a900d3f4bc62ca2d8605f77f
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/milo-os/ipam/releases/download/v0.3.1/milo-ipam_Windows_arm64.zip
-      sha256: 3f9b7525708fabdce9047a49c2fa541d4acb3a62dd5a668270edd76472bfc8e4
+      uri: https://github.com/milo-os/ipam/releases/download/v0.5.5/milo-ipam_Windows_arm64.zip
+      sha256: 1728008242cde49826f40ad6f85358b2d73d3b0a27b1bcfa3ef2f34f88bef313
+- apiVersion: datumctl.datum.net/v1alpha1
+  kind: Plugin
+  metadata:
+    name: search
+  spec:
+    shortDescription: Search for resources across the platform by kind, name, and
+      project scope
+    homepage: https://github.com/milo-os/search
+    version: v0.8.7
+    platforms:
+    - selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Linux_x86_64.tar.gz
+      sha256: 39eccc1ec528b9117f85ee1c9c56276b864d77cfd1da194c68a39d2fe41a92d0
+    - selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Linux_arm64.tar.gz
+      sha256: 323bc0febc40fdf2ced70edd50299d2270e2d6f7fa3ded9ef4520cd0810abffe
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Darwin_x86_64.tar.gz
+      sha256: c5d3f9ee37b2aa86115e712bfd55c4a9e42232f01d431524933477981db18d3b
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Darwin_arm64.tar.gz
+      sha256: 42b47d0000a3594f292b2f630f14792179de2229b50bf50f65f681cb96f2f1f2
+    - selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Windows_x86_64.zip
+      sha256: 306a6fa1bccbabe65454e9780b1c531f8bdc322d4d58da540b727fa3aeb9f693
+    - selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+      uri: https://github.com/milo-os/search/releases/download/v0.8.7/milo-search_Windows_arm64.zip
+      sha256: ba3527be5b55f6662239e83b9cc986e540dba026b2c912475410dcfbb2e97563
+- apiVersion: datumctl.datum.net/v1alpha1
+  kind: Plugin
+  metadata:
+    name: telemetry
+  spec:
+    shortDescription: Query logs for your Datum Cloud projects
+    homepage: https://github.com/milo-os/telemetry
+    version: v0.6.3
+    platforms:
+    - selector:
+        matchLabels:
+          os: linux
+          arch: amd64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Linux_x86_64.tar.gz
+      sha256: 184aeb1e7395734249bb0076fb160bb90d77bcd0a41026a200b784976e88ab6c
+    - selector:
+        matchLabels:
+          os: linux
+          arch: arm64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Linux_arm64.tar.gz
+      sha256: 4ea2ce16aa30af34f794297b968d8e6bbefd6fd2b80e8ece99f2e2366e3c4bac
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Darwin_x86_64.tar.gz
+      sha256: 4387c8b927fb65a0e2e5d2585f94db75ea2dda8f95ec2715ce6b34223886af4a
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: arm64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Darwin_arm64.tar.gz
+      sha256: 963e1e376a26377fa9fa547b4b64bb40cceff69340ce62f7895f264a4aa211a4
+    - selector:
+        matchLabels:
+          os: windows
+          arch: amd64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Windows_x86_64.zip
+      sha256: d1fe9ac731fc86d43c4f9e28aa689a73e9ae6f2cd8bebc5c3f054afd94fa6030
+    - selector:
+        matchLabels:
+          os: windows
+          arch: arm64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.3/milo-telemetry_Windows_arm64.zip
+      sha256: 18148cde32bfaf0d36c9a884ec7b5674082ccc881ea93e60469ed39886ae487d

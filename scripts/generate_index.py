@@ -3,8 +3,8 @@
 
 index.yaml is the single file datumctl reads to discover plugins, their
 versions, and per-platform download locations. It is fully derived from
-plugins/*.yaml, so it is regenerated deterministically here and checked for
-drift in CI (`--check`) rather than hand-edited.
+plugins/*.yaml, so it is regenerated deterministically here rather than
+hand-edited, and the catalog health check fails on drift (`--check`).
 
 Usage:
   scripts/generate_index.py           # write index.yaml
