@@ -9,7 +9,6 @@ Milo services ship their own command-line experiences as plugins. This catalog i
 | Name | Description |
 |------|-------------|
 | [billing](plugins/billing.yaml) | View metered usage and spend for your organization or project |
-| [inventory](plugins/inventory.yaml) | Browse and populate the Datum Cloud inventory graph (typed nodes and edges) |
 | [ipam](plugins/ipam.yaml) | Manage IP address space (pools and prefixes) across the platform |
 | [telemetry](plugins/telemetry.yaml) | Query logs for your Datum Cloud projects |
 
