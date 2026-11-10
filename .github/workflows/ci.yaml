@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   ci:
-    uses: datum-cloud/actions/.github/workflows/ci-basic.yaml@v1.26.0
+    uses: datum-cloud/actions/.github/workflows/plugin-catalog-validate.yaml@v1.27.1
     with:
-      run: python3 -m venv "$RUNNER_TEMP/venv" && "$RUNNER_TEMP/venv/bin/pip" install --quiet 'jsonschema[format-nongpl]==4.26.0' 'PyYAML==6.0.3' && "$RUNNER_TEMP/venv/bin/python" scripts/verify_manifests.py
+      # The branch rules require the "ci / Build and test" check.
+      check-name: Build and test

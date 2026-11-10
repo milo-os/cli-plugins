@@ -1,0 +1,23 @@
+name: Rebuild index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "plugins/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rebuild:
+    uses: datum-cloud/actions/.github/workflows/plugin-catalog-index.yaml@v1.27.1
+    with:
+      name: milo-os
+      description: Portable CLI plugins for the Milo platform
+      owner: milo-os
+      homepage: https://github.com/milo-os/cli-plugins
+    secrets:
+      app-id: ${{ secrets.PLUGIN_INDEX_APP_ID }}
+      app-private-key: ${{ secrets.PLUGIN_INDEX_APP_PRIVATE_KEY }}

@@ -1,0 +1,28 @@
+name: Scan releases
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Report which plugins are behind without opening pull requests
+        type: boolean
+        default: false
+      plugin:
+        description: Scan only this plugin, by name
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    uses: datum-cloud/actions/.github/workflows/plugin-catalog-scan.yaml@v1.27.1
+    with:
+      dry-run: ${{ inputs.dry-run || false }}
+      plugin: ${{ inputs.plugin || '' }}
+    secrets:
+      app-id: ${{ secrets.PLUGIN_INDEX_APP_ID }}
+      app-private-key: ${{ secrets.PLUGIN_INDEX_APP_PRIVATE_KEY }}
