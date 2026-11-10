@@ -58,44 +58,44 @@ items:
   spec:
     shortDescription: View metered usage and spend for your organization or project
     homepage: https://github.com/milo-os/billing
-    version: v0.8.3
+    version: v0.8.4
     platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Linux_x86_64.tar.gz
-      sha256: eaf21dc968ec8e27aa939e579311b9871f1dc99f968504f88ff67f3039f23c3c
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Linux_x86_64.tar.gz
+      sha256: 8a74e8b526cccfddcc9485eb57f98ebe623615665a757ef5d8a57354415fcc28
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Linux_arm64.tar.gz
-      sha256: 4d419693b47046191eb9ebaa2b60a9d891aa8d0837d7343a95bb496319c8f620
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Linux_arm64.tar.gz
+      sha256: 473c5bba11c7e1819e7b5a90ac346815f2e534e2c319b6bd30dcd79efc8713c2
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Darwin_x86_64.tar.gz
-      sha256: 083e6b37435b7c4c4e24effca61f45276f2dcda5fdea0d786fdf9f5cc171a804
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Darwin_x86_64.tar.gz
+      sha256: ed3c6c93f3c83dfee0be4d181972920b3db126aa75676a917558efb486dbfe76
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Darwin_arm64.tar.gz
-      sha256: 3f62c5baca7cba40c81c2b34bfa0f56939226611074fb64ec8e774efc08cff82
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Darwin_arm64.tar.gz
+      sha256: a70566ab6561fbf721cad2ed0e6a3af85103713beeaafda1b2652b5c1e9350f0
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Windows_x86_64.zip
-      sha256: e0dc21eec224b4f0a53ca72b5f16c4b3a79b9a67d7e9d48302b7358498295d43
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Windows_x86_64.zip
+      sha256: c3df3acd19b08412b7c855a015aeedd01803c6fb8a485b9b90b3122803413312
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/milo-os/billing/releases/download/v0.8.3/milo-billing_Windows_arm64.zip
-      sha256: 7c568d2a302b0e39e978be08a1536438c16f534f4c978893107da37cfdffecc9
+      uri: https://github.com/milo-os/billing/releases/download/v0.8.4/milo-billing_Windows_arm64.zip
+      sha256: 29bcb86c5bc7699672d36657a9e43f39089315278d474ed0b92d087aea6eede9
 - apiVersion: datumctl.datum.net/v1alpha1
   kind: Plugin
   metadata:
@@ -194,41 +194,41 @@ items:
   spec:
     shortDescription: Query logs for your Datum Cloud projects
     homepage: https://github.com/milo-os/telemetry
-    version: v0.6.8
+    version: v0.6.9
     platforms:
     - selector:
         matchLabels:
           os: linux
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Linux_x86_64.tar.gz
-      sha256: aa990795eb6a6e47f3ed618d75f25f6784b15dad36778b5da548dc46f3862d3a
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Linux_x86_64.tar.gz
+      sha256: 62341ac593b7a969275ccd4d70f51114d382bc49986fd7e10ccb5b5e15b758b3
     - selector:
         matchLabels:
           os: linux
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Linux_arm64.tar.gz
-      sha256: 9e94481065b633fc87e9b2a232fe1d908f63fd34b8cb8a82aa5ec6b9e776a4c5
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Linux_arm64.tar.gz
+      sha256: f41c9250120f7659f1d238c16725ff24a57cf2649e416948e1a073879ac5d829
     - selector:
         matchLabels:
           os: darwin
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Darwin_x86_64.tar.gz
-      sha256: a6942db1710265157f43b6a85ed1db8605e6953b0895a52b5bfd9fadf2b29b64
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Darwin_x86_64.tar.gz
+      sha256: f76049e3e07fefd36830b092ad853019658756f51ea4a2afa9a53f560134ae5b
     - selector:
         matchLabels:
           os: darwin
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Darwin_arm64.tar.gz
-      sha256: d98c83815422382d4edffda70988c1f6cdf7ee096b5e557bfdc32662e963a3fb
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Darwin_arm64.tar.gz
+      sha256: fcb77f06425c9a107a322fea1b059cc9a8076538b01b29db5f485082c1220909
     - selector:
         matchLabels:
           os: windows
           arch: amd64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Windows_x86_64.zip
-      sha256: bbc42af23ee9bb2c7232840658a49a4e358d2054a33f0f843b28e3119e4374f9
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Windows_x86_64.zip
+      sha256: 23263ce6722145dd279bb923f9ee713292dd790fe1c0be716ef0059437afb3fb
     - selector:
         matchLabels:
           os: windows
           arch: arm64
-      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.8/milo-telemetry_Windows_arm64.zip
-      sha256: 669fb6117d6a6ab8bfe6643dc0ab7f2c64a561dcb1644ff9eb851688edae72cd
+      uri: https://github.com/milo-os/telemetry/releases/download/v0.6.9/milo-telemetry_Windows_arm64.zip
+      sha256: a227dac3499f65101436d982707b6b21952ee9a8da8524f53bbf734f852d6374
