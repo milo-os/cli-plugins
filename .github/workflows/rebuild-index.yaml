@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   rebuild:
-    uses: datum-cloud/actions/.github/workflows/plugin-catalog-index.yaml@v1.27.1
+    uses: datum-cloud/actions/.github/workflows/plugin-catalog-index.yaml@v1.28.0
     with:
       name: milo-os
       description: Portable CLI plugins for the Milo platform
